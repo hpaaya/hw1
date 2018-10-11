@@ -1,24 +1,784 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dGc-8i-63V">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="71G-2g-8ih">
+            <objects>
+                <tabBarController id="dGc-8i-63V" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wTb-pD-81K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fd0-D8-K6D" kind="relationship" relationship="viewControllers" id="LQZ-s2-NxX"/>
+                        <segue destination="Vlf-Bm-Ktr" kind="relationship" relationship="viewControllers" id="Cfv-KY-vFd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYP-LW-XPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1302" y="-340"/>
+        </scene>
+        <!--角色介紹-->
+        <scene sceneID="rEa-Xz-pyv">
+            <objects>
+                <tableViewController id="UpK-CX-hOY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XUm-xc-yEj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="e9T-X9-iBN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="135" id="NA6-W6-0tW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NA6-W6-0tW" id="G2A-pu-gV1">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="134.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iron" translatesAutoresizingMaskIntoConstraints="NO" id="knT-hA-a8j">
+                                                    <rect key="frame" x="36" y="8" width="125" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="62.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="鋼鐵人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWP-rL-eBZ">
+                                                    <rect key="frame" x="229" y="54" width="67" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.16326751010000001" blue="0.087801281970000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="rSU-fn-rJN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="135" id="uem-px-xvg">
+                                        <rect key="frame" x="0.0" y="135" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uem-px-xvg" id="Awv-kN-M2K">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="134.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cap" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-Y7-fFZ">
+                                                    <rect key="frame" x="36" y="8" width="125" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="62.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="美國隊長" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCE-gv-PiW">
+                                                    <rect key="frame" x="221" y="54" width="90" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0031332157086580992" green="0.17402753233909607" blue="0.98928350210189819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="W9Y-fR-UpF" kind="show" id="0pc-Ui-S8d"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="135" id="PPC-bi-5Vn">
+                                        <rect key="frame" x="0.0" y="270" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PPC-bi-5Vn" id="2IN-vr-Jzf">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="134.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thor" translatesAutoresizingMaskIntoConstraints="NO" id="8u9-xi-ZnM">
+                                                    <rect key="frame" x="36" y="8" width="125" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="62.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="雷神索爾" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-st-4Oe">
+                                                    <rect key="frame" x="222" y="63" width="90" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.91720761289999997" blue="0.5010457398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="wB0-r0-kdA" kind="show" id="uIv-9J-IZm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="135" id="gjX-fo-9GP">
+                                        <rect key="frame" x="0.0" y="405" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gjX-fo-9GP" id="eAy-Ro-sov">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="134.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hulk" translatesAutoresizingMaskIntoConstraints="NO" id="gQZ-6A-JT4">
+                                                    <rect key="frame" x="32" y="5" width="125" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="62.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="浩克" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3n-O0-PqK">
+                                                    <rect key="frame" x="232" y="54" width="45" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.4636595765" green="1" blue="0.32622554129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="5KK-qZ-doO" kind="show" id="WYA-R2-QeB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="135" id="ttU-fM-CW0">
+                                        <rect key="frame" x="0.0" y="540" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ttU-fM-CW0" id="X7q-lv-8zX">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="134.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackwidow" translatesAutoresizingMaskIntoConstraints="NO" id="fkH-6i-MG7">
+                                                    <rect key="frame" x="36" y="8" width="125" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="62.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="黑寡婦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQE-FW-QNb">
+                                                    <rect key="frame" x="231" y="57" width="67" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="eif-x6-loh" kind="show" id="wID-2Q-Ty9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="135" id="4Nw-JM-K32">
+                                        <rect key="frame" x="0.0" y="675" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Nw-JM-K32" id="TAu-ap-sPz">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="134.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hawkeye" translatesAutoresizingMaskIntoConstraints="NO" id="oTn-OZ-eOk">
+                                                    <rect key="frame" x="36" y="8" width="125" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="62.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="鷹眼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gad-0O-AYV">
+                                                    <rect key="frame" x="238" y="54" width="45" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="woP-4D-Vmr" kind="show" id="mgG-Ah-vjh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="135" id="BOM-uJ-EXQ">
+                                        <rect key="frame" x="0.0" y="810" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BOM-uJ-EXQ" id="1pC-HR-tgv">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="134.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fury" translatesAutoresizingMaskIntoConstraints="NO" id="hba-Uu-W1N">
+                                                    <rect key="frame" x="36" y="8" width="125" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <real key="value" value="62.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="局長" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pB-6o-f20">
+                                                    <rect key="frame" x="243" y="54" width="45" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="1L3-EG-mZ6" kind="show" id="RZE-hK-HLw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="UpK-CX-hOY" id="YjJ-Ke-uQQ"/>
+                            <outlet property="delegate" destination="UpK-CX-hOY" id="YiD-CF-rKy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="角色介紹" id="b0v-jj-gyJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7O-eL-Lqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="-830"/>
+        </scene>
+        <!--機構介紹-->
+        <scene sceneID="F7z-mn-Ado">
+            <objects>
+                <tableViewController id="Dsj-VR-O4E" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gJO-Og-Zkn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="Ngy-7y-fAu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="241" id="oMV-9C-7T0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="241"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oMV-9C-7T0" id="W5U-fV-b83">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="240.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stark" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-2U-8h6">
+                                                    <rect key="frame" x="16" y="11" width="200" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="100"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="史塔克工業" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POp-Z2-FX1">
+                                                    <rect key="frame" x="244" y="90" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rdV-D2-X1H" kind="show" id="9q2-IB-8ua"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="266" id="fWK-tx-qkk">
+                                        <rect key="frame" x="0.0" y="241" width="414" height="266"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fWK-tx-qkk" id="AO4-2D-iWP">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="265.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="rtl-C0-dRt">
+                                                    <rect key="frame" x="16" y="30" width="200" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="100"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="神盾局" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOn-kD-Hmg">
+                                                    <rect key="frame" x="262" y="117" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="GHN-r2-Km8" kind="show" id="Hnk-Cz-sOi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Dsj-VR-O4E" id="EGx-qt-6yc"/>
+                            <outlet property="delegate" destination="Dsj-VR-O4E" id="idE-Bg-ymP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="機構介紹" id="BWK-yu-9en"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1OA-cm-MBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248.80000000000001" y="105.69715142428787"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmM-EY-wG9">
+                                <rect key="frame" x="0.0" y="33" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jarvis" translatesAutoresizingMaskIntoConstraints="NO" id="2ur-pf-YFc">
+                                        <rect key="frame" x="0.0" y="32" width="412" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O0R-yo-7Vn">
+                                        <rect key="frame" x="61" y="317" width="290" height="267"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <string key="text">鋼鐵人
+Iron Man
+本名安東尼·愛德華·史塔克，暱稱東尼·前史塔克企業CEO，麻省理工學院榮譽校友，一名有天才智商的花花公子，在阿富汗測試導彈試驗時被恐怖分子組織十環幫綁架，也因爲心臟受損而被安裝機械心臟，但卻在囚禁途中時遇到的醫生伊森共同發明了用來逃離的鋼鐵盔甲Mark 1。在戰亂地區遇到的事情讓東尼有了決心幫助世界的想法，開始研發鋼鐵裝。</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="uE1-Vf-zUa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2592.753623188406" y="-1835.054347826087"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PYy-T2-3kD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fd0-D8-K6D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="oJf-nd-a1x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cdY-uM-nDx">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UpK-CX-hOY" kind="relationship" relationship="rootViewController" id="y4c-hS-UU8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaZ-zg-GPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="-650"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GUL-rK-67b">
+            <objects>
+                <viewController id="W9Y-fR-UpF" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXj-Ok-Ki4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JpA-sR-7fB">
+                                <rect key="frame" x="0.0" y="33" width="414" height="654"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9Rn-hr-0Pf">
+                                        <rect key="frame" x="0.0" y="32" width="414" height="254"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.64999997615814209" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gqD-qM-yok">
+                                        <rect key="frame" x="62" y="302" width="290" height="333"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">美國隊長
+Ｃaptain America
+本名史蒂文·“史蒂夫”·罗杰斯（Steven “Steve” Rogers），1920年7月4日出生于美国纽约布鲁克林区，原本是一名身体瘦弱的新兵，在接受美国政府的实验改造后变成了“超级士兵”，这使其力量、速度、耐力等各项体能都远超出于常人，且还被美国政府赋予了由世界上最坚硬的金属之一振金制成的盾牌，从此史蒂夫以美国队长的身份，为美国及世界在二战中立下显赫战功，后来在二战尾声的一次行动中，美国队长与宿敌红骷髅战斗，并掉入大海之中被冰封近70年，直到被神盾局发现并解冻后才加入了复仇者联盟，此后在美国队长的领导下，复仇者联盟出生入死，赢得一次又一次近乎不可能的胜利。</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="DgD-n4-sFg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1WG-Jh-4c4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHv-qj-OGW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2544.9275362318845" y="-1162.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hYK-d5-TDz">
+            <objects>
+                <viewController id="woP-4D-Vmr" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j1d-jX-Q6i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXT-i8-K6L">
+                                <rect key="frame" x="0.0" y="33" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eye2" translatesAutoresizingMaskIntoConstraints="NO" id="cgB-kL-5Lt">
+                                        <rect key="frame" x="0.0" y="32" width="418" height="425"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cAQ-wE-IRH">
+                                        <rect key="frame" x="77" y="309" width="290" height="337"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">鷹眼
+Hawkeye
+本名克林特巴頓(Clint Barton)， 童年時因為車禍失去雙親(不知道多少超級英雄失去雙親阿..)，在孤兒院待了一段時間後，逃出孤兒院加入了一個馬戲團，被馬戲團訓練為神箭手，後來在各地巡迴表演，因為看到鋼鐵人英勇的戰鬥，而立志成為變裝英雄，但一次的行動被誤認為罪犯，逃亡的鷹眼遇上了黑寡婦，被唆使去對付鋼鐵人，戰敗後的黑寡婦消失離開了鷹眼，傷心而再次到處流亡的鷹眼決定成為一個坦白且正直的人 。 早期的鷹眼經歷很多事，做事魯莽的他常害自己陷入很多麻煩，但一次見義勇為的行動，拯救了正被搶劫的賈維斯(鋼鐵人的管家，電影裡被改編成AI)，賈維斯為表達感激，邀請他到復仇者的總部作客，慢慢的獲得英雄們的信任，而與他為敵過的鋼鐵人也感受到鷹眼那正義的赤子之心，提拔他成為一個超級英雄。</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pyJ-Vc-62S"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="uRZ-cM-thQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faM-SZ-uTm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2544.9275362318845" y="715.76086956521749"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="u0h-bg-NZq">
+            <objects>
+                <viewController id="1L3-EG-mZ6" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dcf-Kb-iqQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Sp-vC-ntG">
+                                <rect key="frame" x="0.0" y="33" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nick" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-ZE-sqm">
+                                        <rect key="frame" x="0.0" y="30" width="419" height="332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2ZY-mc-2oy">
+                                        <rect key="frame" x="58" y="305" width="290" height="337"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text" base64-UTF8="YES">
+56We55u+5bGA6ZW3Ck5pY2sgRnVyeQrnpZ7nm77lsYDliY3lsYDplb/vvIwxMOe6p+eJueW3pe+8jOS5
+n+iiq+ensOS4ujMz57qn5a6Y5ZGY44CC5byX55Ge5pyN55So5LqG55Sx6LSd54m56ZyN5bCU5b63wrfm
+lq/ohb7kvK/moLzvvIhCZXJ0aG9sZCBTdGVybmJlcmfvvInmlZnmjojlj5HmmI7nmoTmipfogIHljJbo
+ja/liYLvvIhTU1PorqHliJLvvInvvIzouqvkvZPogIHljJbpgJ/luqblpKflpKflh4/nvJPvvIjov5nn
+p43ooYDmuIXoja/liYLpnIDmjIHkuYXmnI3nlKjvvIzlpoLmnpznqoHnhLblgZzmraLmnI3nlKjvvIzo
+uqvkvZPkvJrku6XmnoHlv6sI55qE6YCf5bqm6ICB5YyW44CC5Yas5pel5oiY5aOr44CB56We55u+5bGA
+54m55bel6L6+5aeG5by5wrfmnZzmoLnnrYnkurrkuZ/lnKjmjIHnu63ms6jlsITvvInjgILlvJfnkZ7m
+mK/kuIDlkI3otoXlh6HnmoTpooblr7zogIXvvIzmi6XmnInml6DkuI7kvKbmr5TnmoTmiJjnlaXlpLTo
+hJHvvIzog73lpJ/moLnmja7miJjlnLrlvaLlir/nmoTovazlj5jlv6vpgJ/liLblrprnm7jlupTnmoTm
+iJjmnK/mjqrmlr3jgILku5bkuZ/mmK/kuIDlkI3pobbnuqfnmoTlhpvkuovkuJPlrrbvvIzmi6XmnInk
+uLDlr4znmoTmiJjmlpfnu4/pqozlkozlhpvkuovnn6Xor4bvvIzmm77lj4LkuI7lubbpgJrov4fkuobn
+u7/oibLlkozpu5HoibLotJ3pm7fluL3nibnnp43pg6jpmJ/nmoTmiYDmnInorq3nu4PjgII
+</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kKH-9w-B6X"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="kGM-1V-YtK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byc-hs-4jW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233.3333333333335" y="-96.195652173913047"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eyw-hS-oHp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vlf-Bm-Ktr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="dia-wU-pfe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xkf-La-aJn">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dsj-VR-O4E" kind="relationship" relationship="rootViewController" id="5TU-ZN-FU0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YH6-yk-QUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481" y="125"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2CS-68-1Lg">
+            <objects>
+                <viewController id="rdV-D2-X1H" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X2i-1U-tfs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-32-owi">
+                                <rect key="frame" x="0.0" y="33" width="416" height="654"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stark2" translatesAutoresizingMaskIntoConstraints="NO" id="cLq-71-F1A">
+                                        <rect key="frame" x="0.0" y="32" width="416" height="230"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbN-Wn-v6q">
+                                        <rect key="frame" x="426" y="494" width="230" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">為父親留下來的史塔克企業，後來改名為史塔克國際企業（Stark International）。
+史塔克企業將世界各地許多公司行號併購於其旗下，在2008年的連載漫畫裡提到，台北101也是史塔克企業名下的大樓，但在一次意外中被炸毀。</string>
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9g-fz-g2N">
+                                        <rect key="frame" x="29" y="286" width="359" height="344"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">為父親留下來的史塔克企業，後來改名為史塔克國際企業（Stark International）。
+史塔克企業將世界各地許多公司行號併購於其旗下，在2008年的連載漫畫裡提到，台北101也是史塔克企業名下的大樓，但在一次意外中被炸毀。</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="INN-17-iaa"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="0Jh-w4-qQt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQQ-dG-0sl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="56.250000000000007"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="VFM-ah-2YX">
+            <objects>
+                <viewController id="GHN-r2-Km8" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ibs-rn-YG7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZvU-S8-wWf">
+                                <rect key="frame" x="0.0" y="31" width="414" height="656"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-3" translatesAutoresizingMaskIntoConstraints="NO" id="zFn-Lh-BXq">
+                                        <rect key="frame" x="42" y="53" width="344" height="202"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tyv-2p-Nqz">
+                                        <rect key="frame" x="62" y="284" width="290" height="317"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">神盾局（S.H.I.E.L.D.）是漫威漫畫中的一個組織。漫威電影宇宙的神盾局是由上校查斯特·菲力浦斯、霍華·史塔克以及探員佩姬·卡特在二戰後所創辦的，前身為戰略科學儲備部（Strategic Scientific Reserve, S.S.R.）。現代由局長尼克·福瑞及副局長瑪莉亞·希爾領導；《美國隊長2：酷寒戰士》事件後，由菲爾·考森領導。《美國隊長3：英雄內戰》之後，菲爾·考森復職為普通探員。新任局長身分不詳，由Jason O'Mara飾演。是戰略國土戰略防禦攻擊與後勤保障局，是一個美國政府的反政府外軍事反恐情報機構，其任務是維護全球安全。在盟軍戰勝軸心國和第二次世界大戰中的九頭蛇(HYDRA)後成立，神盾局旨在保護美國乃至整個世界免受一切可能的威脅。憑藉其先進的武器和特殊的代理人，神盾局也許是地球上最偉大的軍事力量。由Nick Fury和現代世界安全理事會主持，神盾局必須處理顯著增加的異人族，危險的先進技術和外星人。這些問題最終導致復仇者聯盟的成立，復仇者聯盟在2012年紐約被外星人入侵地球期間招募來拯救世界。該部門在紐約之戰後公布，部分原因是潮漲網站。
+第二次世界大戰後建立後由尼克·福瑞領導，內戰後由鋼鐵人東尼·史塔克領導，秘密入侵後被綠惡魔諾曼·奧斯朋強迫改組為H.A.M.M.E.R.[2]，但隨著奧斯朋的失勢，H.A.M.M.E.R.遭到瓦解，S.H.I.E.L.D.也得以重組。</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fk5-Si-S0W"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Gno-ou-7fC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMV-Fu-ihw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="845"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="H6z-1h-ILz">
+            <objects>
+                <viewController id="wB0-r0-kdA" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5y-6E-6rt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zr4-dV-wrI">
+                                <rect key="frame" x="0.0" y="33" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thor1" translatesAutoresizingMaskIntoConstraints="NO" id="e7c-Sd-DqD">
+                                        <rect key="frame" x="0.0" y="30" width="411" height="326"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wc7-zW-Wg7">
+                                        <rect key="frame" x="60" y="310" width="290" height="337"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">雷神索爾
+Thor
+本名：索爾·奧丁森 (Thor Odinson)，索爾是阿斯嘉的眾神之父奧丁之子，母親為蓋亞。皆具阿斯嘉人和舊神的血統，使索爾比多數的同族更加強大；他的皮膚、肌肉和骨組織是常人的數倍，有助於他超人的重量；他可以抵抗強大的能量爆破、重量衝擊、從高處墜落、爆炸和其他攻擊力量。他可以極端的速度移動，在幾分鐘內到達太陽，Hela曾經指出索爾的速度快過他的閃電。手持的雷神之鎚Mjolnir，被證明能夠打開時間和空間的通道、阻斷各種能量暴風、按照主人的意願彎曲元素；索爾已顯示能以兩倍光速來揮動Mjolnir。身為阿斯嘉的戰神，訓練有素且熟悉戰鬥。他能夠完全掌控天氣，造出橫跨歐陸的斷層和地震、控制山崩和雪崩；他能從手中放出閃電，或是透過Mjolnir從天空召喚閃電，</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fvD-Ay-aoX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="NmI-aY-ush"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsM-mg-u3O" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3373.913043478261" y="-860.054347826087"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="467-Qu-EXe">
+            <objects>
+                <viewController id="5KK-qZ-doO" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="poa-ny-CSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0C-JJ-obQ">
+                                <rect key="frame" x="0.0" y="17" width="412" height="703"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nnn-Ly-8pc">
+                                        <rect key="frame" x="0.0" y="55" width="412" height="326"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vwz-QE-dAh">
+                                        <rect key="frame" x="61" y="371" width="290" height="305"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">浩克
+Ｈulk
+本名：羅伯特·布魯斯·班納 (Robert Bruce Banner)，一次實驗過程的意外，沐浴在γ射線下的羅伯特·布魯斯·班納博士被轉變為了綠色的巨獸浩克──憤怒的化身。浩克擁有無法估量的幾乎無限的物理力量，浩克的實力是與他的憤怒、興奮、壓力成正比。浩克能夠利用他高度發達的腿部肌肉跨越很遠的距離，他的超級跳躍被計算達到每小時473英里，不只一次浩克接近跳進地球的軌道。他的耐力被形容為幾乎無限的，他的身體可以高度抵抗物理傷害，承受高口徑的子彈、強大的能量爆炸、極端的壓力、從軌道的高度落下，浩克曾數次承受核爆發、達一億華氏溫度的超新星爆發、以及行星毀滅性的衝擊。</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78795242309570312" green="0.94807177782058716" blue="0.79930835962295532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78795242309570312" green="0.94807177782058716" blue="0.79930835962295532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ObI-P3-kQQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cw0-di-rBp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bw9-p3-pdx" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4311.594202898551" y="-652.17391304347836"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="6rd-kL-za6">
+            <objects>
+                <viewController id="eif-x6-loh" customClass="ViewController" customModule="hw1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K6u-4e-uop">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnb-pN-bGB">
+                                <rect key="frame" x="0.0" y="33" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="widow2" translatesAutoresizingMaskIntoConstraints="NO" id="4XQ-ua-6zc">
+                                        <rect key="frame" x="0.0" y="39" width="332" height="356"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jMz-RS-4D5">
+                                        <rect key="frame" x="108" y="307" width="290" height="337"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">黑寡婦
+Black Widow
+本名娜塔莎蘿曼洛夫(Natasha Romanoff)， 出生在俄羅斯，經歷嚴格的臥底、武術、狙擊訓練，精通各種高科技武器， 而她的專屬武器"寡婦之吻是對裝備在她手腕上的能量發射器，在初登場時是以蘇聯間諜反派的身分對抗鋼鐵人，為了得到鷹眼的幫忙，欺騙他說對抗鋼鐵人是為了世界和平，但最後戰敗的黑寡婦，因為愛上了鷹眼，在1966年The Avengers No.29背叛蘇聯加入了復仇者，在1970年，蜘蛛人的連載故事中，首次出現她的招牌黑色緊身衣。在一個回想黑寡婦過去的故事中，她的童年時因為火災失去了雙親，後來被納粹綁架到一個神祕設施，被還未成為金鋼狼的羅根還有美國隊長救出，不久後加入蘇聯立志成為一個強大的戰士，在近年的故事中，主要是以復仇者的成員或是神盾探員的身分出現在各個漫畫。</string>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="thj-EY-bCp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Q4X-oM-kXz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6c-GK-w7r" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3374" y="686"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="822" height="465"/>
+        <image name="Image-1" width="807" height="504"/>
+        <image name="Image-2" width="1019" height="573"/>
+        <image name="Image-3" width="923" height="580"/>
+        <image name="blackwidow" width="925" height="573"/>
+        <image name="cap" width="370" height="578"/>
+        <image name="eye2" width="604" height="483"/>
+        <image name="fury" width="984" height="498"/>
+        <image name="hawkeye" width="806" height="453"/>
+        <image name="hulk" width="964" height="539"/>
+        <image name="iron" width="867" height="581"/>
+        <image name="jarvis" width="1024" height="577"/>
+        <image name="nick" width="577" height="578"/>
+        <image name="stark" width="466" height="580"/>
+        <image name="stark2" width="902" height="571"/>
+        <image name="thor" width="227" height="337"/>
+        <image name="thor1" width="247" height="292"/>
+        <image name="widow2" width="394" height="576"/>
+    </resources>
 </document>
